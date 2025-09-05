@@ -20,8 +20,6 @@ gem "sqlite3", "~> 1.6"
 # https://github.com/jarmo/require_all
 gem "require_all"
 
-gem 'rubocop'
-
 # These gems will only be used when we are running the application locally
 group :development do
   gem "pry"
