@@ -20,6 +20,11 @@ gem "sqlite3", "~> 1.6"
 # https://github.com/jarmo/require_all
 gem "require_all"
 
+gem "fiddle"
+gem "logger"
+gem "ostruct"
+gem "rubocop"
+
 # These gems will only be used when we are running the application locally
 group :development do
   gem "pry"
@@ -30,3 +35,9 @@ group :test do
   gem "database_cleaner"
   gem "rspec"
 end
+
+ruby "3.3.5"
+
+gem "rubocop-rake", "~> 0.7.1"
+
+gem "rubocop-rspec", "~> 3.7"
