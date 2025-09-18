@@ -34,6 +34,7 @@ GEM
     database_cleaner-core (2.0.1)
     diff-lcs (1.6.2)
     drb (2.2.3)
+    fiddle (1.1.8)
     i18n (1.14.7)
       concurrent-ruby (~> 1.0)
     json (2.13.2)
@@ -44,7 +45,13 @@ GEM
     minitest (5.25.5)
     mustermann (3.0.4)
       ruby2_keywords (~> 0.0.1)
-    pry (0.14.1)
+    ostruct (0.6.3)
+    parallel (1.27.0)
+    parser (3.3.9.0)
+      ast (~> 2.4.1)
+      racc
+    prism (1.4.0)
+    pry (0.15.2)
       coderay (~> 1.1)
       method_source (~> 1.0)
     racc (1.8.1)
@@ -60,16 +67,16 @@ GEM
     rake (13.3.0)
     regexp_parser (2.11.2)
     require_all (3.0.0)
-    rspec (3.10.0)
-      rspec-core (~> 3.10.0)
-      rspec-expectations (~> 3.10.0)
-      rspec-mocks (~> 3.10.0)
-    rspec-core (3.10.1)
-      rspec-support (~> 3.10.0)
-    rspec-expectations (3.10.1)
+    rspec (3.13.1)
+      rspec-core (~> 3.13.0)
+      rspec-expectations (~> 3.13.0)
+      rspec-mocks (~> 3.13.0)
+    rspec-core (3.13.5)
+      rspec-support (~> 3.13.0)
+    rspec-expectations (3.13.5)
       diff-lcs (>= 1.2.0, < 2.0)
-      rspec-support (~> 3.10.0)
-    rspec-mocks (3.10.2)
+      rspec-support (~> 3.13.0)
+    rspec-mocks (3.13.5)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.13.0)
     rspec-support (3.13.5)
@@ -87,6 +94,12 @@ GEM
     rubocop-ast (1.46.0)
       parser (>= 3.3.7.2)
       prism (~> 1.4)
+    rubocop-rake (0.7.1)
+      lint_roller (~> 1.1)
+      rubocop (>= 1.72.1)
+    rubocop-rspec (3.7.0)
+      lint_roller (~> 1.1)
+      rubocop (~> 1.72, >= 1.72.1)
     ruby-progressbar (1.13.0)
     ruby2_keywords (0.0.5)
     securerandom (0.4.1)
@@ -97,7 +110,7 @@ GEM
       rack-protection (= 4.1.1)
       rack-session (>= 2.0.0, < 3)
       tilt (~> 2.0)
-    sinatra-activerecord (2.0.23)
+    sinatra-activerecord (2.0.28)
       activerecord (>= 4.1)
       sinatra (>= 1.0)
     sqlite3 (1.7.3-aarch64-linux)
@@ -115,17 +128,31 @@ GEM
     unicode-emoji (4.0.4)
 
 PLATFORMS
-  universal-darwin-20
+  aarch64-linux
+  arm-linux
+  arm64-darwin
+  x86-linux
+  x86_64-darwin
+  x86_64-linux
 
 DEPENDENCIES
   activerecord (~> 7.1)
   database_cleaner
+  fiddle
+  logger
+  ostruct
   pry
   rake
   require_all
   rspec
+  rubocop
+  rubocop-rake (~> 0.7.1)
+  rubocop-rspec (~> 3.7)
   sinatra-activerecord
   sqlite3 (~> 1.6)
 
+RUBY VERSION
+   ruby 3.3.5p100
+
 BUNDLED WITH
-   2.2.23
+   2.7.1

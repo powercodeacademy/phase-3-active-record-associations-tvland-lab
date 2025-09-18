@@ -26,7 +26,7 @@ these existing tables as per the guidelines below.
 ## Instructions
 
 **Note**: This lab is test-driven, but in order for the tests to run correctly,
-you need to complete **all** of the migration files before running `learn test`.
+you need to complete **all** of the migration files before running `bin/rspec`.
 The first three migration files have been done already. You only need to work on
 the `004`, `005` and `006` migrations.
 
@@ -58,7 +58,7 @@ columns.
 Write a migration that adds the column `catchphrase` as a string to your
 `characters` table.
 
-**Once you've completed all three migrations, go ahead and run `learn test` to
+**Once you've completed all three migrations, go ahead and run `bin/rspec` to
 see what you need to do for the models.**
 
 ### Model Methods
