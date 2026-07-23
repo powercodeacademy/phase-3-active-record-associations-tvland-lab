@@ -1,3 +1,12 @@
+class Character < ActiveRecord::Base
+  belongs_to :actor
+  belongs_to :show
+
+  def say_that_thing_you_say
+    "#{name} always says: #{catchphrase}"
+  end
+end
+
 describe Character do
 
   it "has a first and last name" do
